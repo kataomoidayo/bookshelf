@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #edf0f1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーーーーーーーheaderはanchorを飲み込むなんでーーーーーーーーーーーーーーーー*/
+html {
+    scroll-padding-top: 70px;
+}
+
+/* ーーーーーーーーーーーーーーーーheaderはここからーーーーーーーーーーーーーーーー */
+.nav-logo {
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: #539D8B;
+    max-height: 100px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+    padding: 0px 10px;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 200;
+    text-decoration: none;
+    color: #edf0f1;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+.toggle span {
+    display: none;
+}
+
+
+/* ーーーーーーーーーーーーーーーーmainはここからーーーーーーーーーーーーーーーー */
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+#beranda {
+    display: flex;
+    align-items: center;
+    height: 1000px;
+}
+
+.beranda-logo {
+    width: 500px;
+}
+
+#produk {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 25px;
+}
+
+h3 {
+    padding-top: 60px;
+    border-bottom: 5px solid #539D8B;
+}
+
+.produk-img {
+    width: 100%;
+    max-width: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 50px;
+    margin-top: 25px;
+    width: 600px;
+}
+
+.tb-produk {
+    text-align: justify;
+    padding-top: 10px;
+}
+
+th {
+    height: 50px;
+}
+
+.tombol {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.sebelumnya,
+.selanjutnya,
+.beli {
+    border: none;
+    background-color: #539D8B;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-size: 15px;
+    color: white;
+}
+
+.sebelumnya:hover {
+    background-color: #71bdab;
+
+}
+
+.selanjutnya:hover {
+    background-color: #71bdab;
+}
+
+.beli:hover {
+    background-color: #71bdab;
+}
+
+#tentang {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 1000px;
+}
+
+.profil {
+    display: flex;
+    flex-direction: column;
+}
+
+.prof {
+    width: 200px;
+    border-radius: 8px;
+}
+
+.tb-profil {
+    text-align: justify;
+    padding-top: 10px;
+}
+
+footer {
+    padding: 20px;
+    color: #edf0f1;
+    background-color: #539D8B;
+    text-align: center;
+    font-weight: 500px;
+}
+
+#bantuan {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 50px;
+    align-items: center;
+    height: 1000px;
+    padding-bottom: 50px;
+}
+
+/* ーーーーーーーーーーーーーーーーreponsive screenはここからーーーーーーーーーーーーーーーー */
+@media screen and (max-width: 1000px) {
+
+    .header-logo {
+        width: 150px;
+    }
+
+    .nav-bar {
+        width: 100%;
+    }
+
+    #beranda {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .beranda-logo {
+        width: 300px;
+    }
+
+    .beranda-info {
+        font-size: 16px;
+    }
+
+    /* menu/navigasi toggle */
+    ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: -100%;
+        top: 84px;
+        gap: 0;
+        background-color: #539D8B;
+        width: 100%;
+        transition: 0.3s;
+        text-align: left;
+    }
+
+    .nav-bar li {
+        margin: 16px 0;
+    }
+
+    .nav-bar.active {
+        right: 0;
+
+    }
+
+    .toggle span {
+        color: #edf0f1;
+        font-size: 30px;
+        cursor: pointer;
+        padding-right: 0px;
+        display: contents;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+}

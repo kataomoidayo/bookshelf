@@ -34,7 +34,6 @@ function findBookIndex(bookId) {
   }
   return -1;
 }
-// ーーーーーーーーーBrowserのlocal storageを調べますーーーーーーーーー
 
 function isStorageExist() /* boolean */ {
   if (typeof (Storage) === undefined) {
@@ -43,7 +42,7 @@ function isStorageExist() /* boolean */ {
   }
   return true;
 }
-// ーーーーーーーーーデータをセーブしますーーーーーーーーー
+
 function saveData() {
   if (isStorageExist()) {
     const parsed /* string */ = JSON.stringify(books);
@@ -51,8 +50,7 @@ function saveData() {
     document.dispatchEvent(new Event(SAVED_EVENT));
   }
 }
-// ーーーーーーーーーlocal storageからデータをロードしますーーーーーーーーー
-// ーーーーーーーーーデータ解析をvariabelに載せますーーーーーーーーー
+
 function loadDataFromStorage() {
   const serializedData /* string */ = localStorage.getItem(STORAGE_KEY);
   let data = JSON.parse(serializedData);
@@ -79,10 +77,10 @@ function addbooks(bookObject) {
   textTitle.innerText = title;
 
   const textAuthor = document.createElement('p');
-  textAuthor.innerText = 'Penulis :' + author;
+  textAuthor.innerText = 'Penulis : ' + author;
 
   const textYear = document.createElement('p');
-  textYear.innerText = 'Tahun :' + year;
+  textYear.innerText = 'Tahun : ' + year;
 
   const newLine = document.createElement('div');
   newLine.classList.add('action');
@@ -94,14 +92,14 @@ function addbooks(bookObject) {
 
   if (isCompleted) {
     const undoButton = document.createElement('button');
-    undoButton.classList.add('green');
+    undoButton.classList.add('pindah');
     undoButton.innerText = 'Belum Selesai';
     undoButton.addEventListener('click', function () {
       undoTaskFromCompleted(id);
     });
 
     const deleteButton = document.createElement('button');
-    deleteButton.classList.add('red');
+    deleteButton.classList.add('hapus');
     deleteButton.innerText = 'Hapus';
     deleteButton.addEventListener('click', function () {
       removeTaskFromCompleted(id);
@@ -110,14 +108,14 @@ function addbooks(bookObject) {
   } else {
 
     const doneButton = document.createElement('button');
-    doneButton.classList.add('green');
+    doneButton.classList.add('pindah');
     doneButton.innerText = 'Selesai';
     doneButton.addEventListener('click', function () {
       addTaskToCompleted(id);
     });
 
     const deleteButton = document.createElement('button');
-    deleteButton.classList.add('red');
+    deleteButton.classList.add('hapus');
     deleteButton.innerText = 'Hapus';
     deleteButton.addEventListener('click', function () {
       removeTaskFromCompleted(id);
@@ -192,18 +190,12 @@ document.addEventListener('DOMContentLoaded', function () {
   submitBook.addEventListener('submit', function (event) {
     event.preventDefault();
     addtoshelf();
-    // console.log('Buku berhasil di tambahkan');
-    // alert('Buku berhasil di tambahkan');
+
   });
   if (isStorageExist()) {
     loadDataFromStorage();
   }
 });
-// document.addEventListener(SAVED_EVENT, () => {
-//   console.log('Buku berhasil di tambahkan.');
-//   alert('Buku berhasil di tambahkan.');
-// });
-
 document.addEventListener(RENDER_EVENT, function () {
   const uncompletedBooks = document.getElementById('incompleteBookList');
   const completedBooks = document.getElementById('completeBookList');

@@ -14,9 +14,11 @@ body {
 html {
     scroll-padding-top: 70px;
 }
-h1{
+
+h1 {
     cursor: pointer;
     font-size: 25px;
+    color: #edf0f1;
 }
 
 
@@ -31,19 +33,7 @@ header {
     position: sticky;
     top: 0;
 }
-.search-bar > form > input{
-    border-radius: 5px;
-    height: 25px;
-}
-.search-bar > form  > button{
-    border-radius: 5px;
-    height: 25px;
-    background-color: #edf0f1;
-    color: #539D8B;
-    cursor: pointer;
 
-}
-/* akuma */
 main {
     max-width: 800px;
     width: 80%;
@@ -56,21 +46,23 @@ main {
     display: flex;
     flex-direction: column;
     padding: 16px;
-    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid #539D8B;
     border-radius: 10px;
     height: 500px;
+
 }
 
-.input_section > h2 {
+.input_section>h2 {
     text-align: center;
-    color: #539D8B;
+    color: black;
 }
 
-.input_section > form > .input {
+.input_section>form>.input {
     margin: 25px 0;
 }
 
-.input_section > form > button {
+.input_section>form>button {
     background-color: #539D8B;
     color: #edf0f1;
     border: 0;
@@ -81,77 +73,106 @@ main {
     cursor: pointer;
 }
 
-.input_section > form > button > span {
+.input_section>form>button:hover {
     font-weight: bold;
+    background-color: #5db19c;
 }
 
-.input_section > form > .input > input {
+.input_section>form>.input>input {
     display: block;
     width: 100%;
     padding: 8px;
     border-radius: 5px;
+    border: 1px solid black;
+    background-color: #edf0f1;
 }
 
 
-.input_section > form > .input > label {
-    color: #539D8B;
+.input_section>form>.input>label {
+    color: black;
     font-weight: bold;
 }
 
-.input_section > form > .input_inline {
+.input_section>form>.input_inline {
     margin: 12px 0;
     display: flex;
     align-items: center;
 }
 
-.input_section > form > .input_inline > label {
-    color: #539D8B;
+.input_section>form>.input_inline>label {
+    color: black;
     font-weight: bold;
     margin-right: 10px;
 }
 
-/* --------------akuma2------------------- */
-
 .book_shelf {
     margin: 16px 0 0 0;
-    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid #539D8B;
     padding: 16px;
     border-radius: 10px;
 }
 
-.book_shelf > h2 {
-    color: #539D8B;
+.book_shelf>h2 {
+    color: black;
+    text-align: center;
 }
 
-.book_shelf > .book_list {
+.book_shelf>.book_list {
     padding: 16px;
 }
 
-.book_shelf > .book_list > .book_item {
+.book_shelf>.book_list>.book_item {
     padding: 8px 16px 16px 16px;
-    border: 1px solid black;
+    border: 1px solid #539D8B;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     margin: 10px 0;
 }
 
-.book_shelf > .book_list > .book_item > h3, p {
+.book_shelf>.book_list>.book_item>h3,
+p {
     margin: 8px 0;
 }
 
-.book_shelf > .book_list > .book_item > .action > button {
-    border: 0;
-    padding: 5px;
-    margin: 0 5px 0 0;
-    border-radius: 5px;
+.book_shelf>.book_list>.book_item>.pindah {
+    color: #edf0f1;
+    background-color: #539D8B;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: none;
     cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+
 }
 
-.book_shelf > .book_list > .book_item > .action > .green {
-    background-color: darkgreen;
-    color: #edf0f1;
+.book_shelf>.book_list>.book_item>.pindah:hover {
+    font-weight: lighter;
+    background-color: #5db19c;
+
 }
 
-.book_shelf > .book_list > .book_item > .action > .red {
-    background-color: darkred;
+.book_shelf>.book_list>.book_item>.hapus {
     color: #edf0f1;
+    background-color: rgb(202, 7, 7);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.book_shelf>.book_list>.book_item>.hapus:hover {
+    background-color: rgb(228, 6, 6);
+}
+
+footer {
+    padding: 20px;
+    color: #edf0f1;
+    background-color: #539D8B;
+    text-align: center;
+    font-weight: 500px;
+    position: sticky;
 }

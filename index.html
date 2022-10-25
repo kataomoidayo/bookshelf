@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOOKSHELF</title>
+    <title>MyBookshef</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
@@ -15,14 +15,6 @@
             <br>
             Bookshelf
         </h1>
-        <nav class="search-bar">
-            <form id="searchBook">
-                <!-- <div class="input"> -->
-                <input id="searchBookTitle" type="text" placeholder="Cari Buku">
-                <button id="searchSubmit" type="submit">Cari</button>
-                <!-- </div> -->
-            </form>
-        </nav>
     </header>
     <main>
         <section class="input_section">
@@ -41,46 +33,33 @@
                     <input id="BookYear" type="number" placeholder="Tahun" required>
                 </div>
                 <div class="input_inline">
-                    <label for="BookIsComplete">Selesai dibaca</label>
+                    <label for="BookIsComplete">Tandai selesai dibaca</label>
                     <input id="BookIsComplete" type="checkbox">
                 </div>
                 <button id="submit" type="submit" value="Submit">Tambah</button>
             </form>
         </section>
-        <section class="book_shelf">
-            <h2>Belum selesai dibaca</h2>
+        <div class="shelf">
+            <section class="book_shelf">
+                <h2>Belum Selesai</h2>
 
-            <div id="incompleteBookList" class="book_list">
-                <!--      <article class="book_item">-->
-                <!--        <h3>Book Title</h3>-->
-                <!--        <p>Penulis: John Doe</p>-->
-                <!--        <p>Tahun: 2002</p>-->
-                <!--    -->
-                <!--        <div class="action">-->
-                <!--          <button class="green">Selesai dibaca</button>-->
-                <!--          <button class="red">Hapus buku</button>-->
-                <!--        </div>-->
-                <!--      </article>-->
-            </div>
-        </section>
+                <div id="incompleteBookList" class="book_list">
 
-        <section class="book_shelf">
-            <h2>Selesai dibaca</h2>
+                </div>
+            </section>
 
-            <div id="completeBookList" class="book_list">
-                <!--      <article class="book_item">-->
-                <!--        <h3>Book Title</h3>-->
-                <!--        <p>Penulis: John Doe</p>-->
-                <!--        <p>Tahun: 2002</p>-->
-                <!--        -->
-                <!--        <div class="action">-->
-                <!--          <button class="green">Belum selesai di Baca</button>-->
-                <!--          <button class="red">Hapus buku</button>-->
-                <!--        </div>-->
-                <!--      </article>-->
-            </div>
-        </section>
+            <section class="book_shelf">
+                <h2>Selesai Dibaca</h2>
+
+                <div id="completeBookList" class="book_list">
+
+                </div>
+            </section>
+        </div>
     </main>
+    <footer>
+        <p>Submission Dicoding:  Aplikasi Pengelolaan Data Menggunakan DOM dan Web Storage &#169; 2022, PUTU ADI SAPUTRA</p>
+    </footer>
     <script src="assets/script.js"></script>
 </body>
 

@@ -31,11 +31,11 @@ header {
     position: sticky;
     top: 0;
 }
-.nav-bar > form > input{
+.search-bar > form > input{
     border-radius: 5px;
     height: 25px;
 }
-.nav-bar > form  > button{
+.search-bar > form  > button{
     border-radius: 5px;
     height: 25px;
     background-color: #edf0f1;
